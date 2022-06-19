@@ -50,5 +50,6 @@ int listaEnteraDePassenger(LinkedList *pArrayListPassenger);
 int passengerIdLibre(LinkedList *pArrayListPassenger);
 void* buscaDeld(LinkedList *pArrayListPassenger, int idABuscar);
 void passangerListarUnica(Passenger *lecturaDeDato);
+int Passenger_comparacionPorNombre(void* primerNombre, void* segundoNombre);
 
 #endif /* PASSENGER_H_ */

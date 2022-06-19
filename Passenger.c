@@ -404,3 +404,36 @@ void passangerListarUnica(Passenger *lecturaDeDato) {
 	}
 
 }
+
+int Passenger_comparacionPorNombre(void* primerNombre, void* segundoNombre)
+{
+	int comprabacion;
+	char primerNombreAux[50];
+	char segundoNombreAux[50];
+
+	Passenger* nombrePasajeroUno;
+	Passenger* nombrePasajeroDos;
+
+	nombrePasajeroUno = (Passenger*) primerNombre;
+	nombrePasajeroDos = (Passenger*) segundoNombre;
+
+	Passenger_getNombre(nombrePasajeroUno, primerNombreAux);
+	Passenger_getNombre(nombrePasajeroDos, segundoNombreAux);
+
+	if(strcmp(primerNombreAux, segundoNombreAux) == 0)
+	{
+		comprabacion = 0;
+	}
+	else
+	{
+		if (strcmp(primerNombreAux, segundoNombreAux) > 0)
+		{
+			comprabacion = 1;
+		}
+		else
+		{
+			comprabacion = -1;
+		}
+	}
+	return comprabacion;
+}
